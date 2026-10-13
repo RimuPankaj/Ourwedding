@@ -1,17 +1,390 @@
-<!-- FIRST SCREEN: GANPATI BLESSING -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pankaj & Rimu | Our Wedding</title>
+
+<style>
+:root {
+  --cream: #fff8ed;
+  --paper: #f4e7d0;
+  --gold: #b58b48;
+  --burgundy: #79333a;
+  --brown: #563d2e;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 20px;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--brown);
+  font-family: Georgia, serif;
+  line-height: 1.8;
+}
+
+section { width: 100%; }
+
+.ganpati-screen {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--cream);
+  padding: 0;
+}
+
+.full-screen-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.save-date-screen {
+  background: var(--cream);
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.section {
+  padding: 65px 22px;
+  text-align: center;
+}
+
+.paper {
+  background: var(--paper);
+}
+
+.eyebrow {
+  color: var(--gold);
+  font-size: 12px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+h1, h2 {
+  color: var(--burgundy);
+  font-weight: normal;
+  line-height: 1.3;
+}
+
+h1 { font-size: clamp(36px, 9vw, 62px); }
+h2 { font-size: clamp(28px, 7vw, 42px); }
+
+.gold-line {
+  width: 90px;
+  height: 1px;
+  background: var(--gold);
+  margin: 24px auto;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+
+.countdown div {
+  min-width: 65px;
+  padding: 12px 8px;
+  border: 1px solid #d7bd91;
+  background: rgba(255,255,255,.35);
+}
+
+.countdown strong {
+  display: block;
+  color: var(--burgundy);
+  font-size: 26px;
+  font-weight: normal;
+}
+
+.countdown span {
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.story {
+  max-width: 720px;
+  margin: auto;
+  font-size: 18px;
+  line-height: 2;
+}
+
+.event {
+  max-width: 480px;
+  margin: 22px auto;
+  padding: 25px 18px;
+  border: 1px solid #d7bd91;
+  background: rgba(255,255,255,.38);
+}
+
+.event h3 {
+  color: var(--burgundy);
+  font-size: 25px;
+  font-weight: normal;
+  margin: 5px 0;
+}
+
+.button {
+  display: inline-block;
+  padding: 13px 24px;
+  margin-top: 15px;
+  background: var(--burgundy);
+  color: white;
+  text-decoration: none;
+  letter-spacing: 1px;
+  border: 0;
+  cursor: pointer;
+  font-family: Georgia, serif;
+}
+
+form {
+  max-width: 500px;
+  margin: 25px auto 0;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin: 16px 0 6px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d7bd91;
+  background: #fffdf8;
+  color: var(--brown);
+  font: inherit;
+  border-radius: 0;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
+  margin-right: 8px;
+}
+
+.choice {
+  display: inline-flex;
+  align-items: center;
+  margin: 5px 14px 5px 0;
+}
+
+footer {
+  padding: 28px 15px;
+  text-align: center;
+  color: var(--burgundy);
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+@media (min-width: 700px) {
+  .full-screen-image {
+    max-width: 650px;
+    margin: auto;
+  }
+  .save-date-screen {
+    padding-top: 25px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- SCREEN 1: GANPATI BLESSING ONLY -->
 <section id="home" class="ganpati-screen">
   <img
     src="front.jpeg"
     alt="Lord Ganesha blessing"
-    class="full-screen-image"
-  >
+    class="full-screen-image">
 </section>
 
-<!-- SECOND SCREEN: SAVE THE DATE -->
+<!-- SCREEN 2: SAVE THE DATE -->
 <section id="save-date" class="save-date-screen">
   <img
     src="invitationjpeg.jpeg"
     alt="Pankaj and Rimu — Save the Date, 10 March 2027"
-    class="full-screen-image"
-  >
+    class="full-screen-image">
 </section>
+
+<!-- COUNTDOWN -->
+<section class="section">
+  <p class="eyebrow">The countdown begins</p>
+  <h1>Pankaj & Rimu</h1>
+  <div class="gold-line"></div>
+  <p>Until we begin our forever</p>
+
+  <div class="countdown">
+    <div><strong id="days">0</strong><span>Days</span></div>
+    <div><strong id="hours">0</strong><span>Hours</span></div>
+    <div><strong id="minutes">0</strong><span>Minutes</span></div>
+    <div><strong id="seconds">0</strong><span>Seconds</span></div>
+  </div>
+</section>
+
+<!-- OUR STORY -->
+<section class="section paper" id="story">
+  <p class="eyebrow">Two paths, one journey</p>
+  <h2>Our Story</h2>
+  <div class="gold-line"></div>
+
+  <div class="story">
+    <p>Some stories begin with a grand gesture, while others begin with a simple hello.</p>
+
+    <p>Ours began at a gathering of school friends, where we met and were introduced to each other for the very first time. Little did we know that life had a few more beautiful encounters planned for us.</p>
+
+    <p>Five months later, we crossed paths again at a friend's wedding. Though life had us living in different cities, fate kept finding little ways to bring us into the same room. Soon, we became part of the same circle of friends, bonding over games, laughter, and spontaneous get-togethers.</p>
+
+    <p>And then, after another five months, what began as chance encounters slowly turned into something more meaningful. Despite the miles between us, we decided to begin our journey together, taking a chance on something that felt special.</p>
+
+    <p>Looking back, perhaps we were never really strangers — just two people whose paths kept crossing until the timing felt right.</p>
+
+    <p>And now, from those unexpected beginnings to the forever ahead, we're writing our favourite chapter yet.</p>
+  </div>
+</section>
+
+<!-- WEDDING EVENTS -->
+<section class="section">
+  <p class="eyebrow">The celebrations</p>
+  <h2>Join Us</h2>
+  <div class="gold-line"></div>
+
+  <article class="event">
+    <p class="eyebrow">9 March 2027</p>
+    <h3>Mehendi</h3>
+    <p>A little colour, a little laughter, and lots of love.</p>
+  </article>
+
+  <article class="event">
+    <p class="eyebrow">9 March 2027</p>
+    <h3>Engagement</h3>
+    <p>Celebrating the beginning of our forever.</p>
+  </article>
+
+  <article class="event">
+    <p class="eyebrow">9 March 2027</p>
+    <h3>Sangeet</h3>
+    <p>An evening of music, dancing, and happy memories.</p>
+  </article>
+
+  <article class="event">
+    <p class="eyebrow">10 March 2027</p>
+    <h3>The Wedding</h3>
+    <p>Two hearts, two families, one beautiful beginning.</p>
+  </article>
+</section>
+
+<!-- VENUE -->
+<section class="section paper" id="venue">
+  <p class="eyebrow">Where our forever begins</p>
+  <h2>The Venue</h2>
+  <div class="gold-line"></div>
+  <h3>The Peerless Inn</h3>
+  <p>Durgapur, West Bengal</p>
+  <a class="button"
+     href="https://www.google.com/maps/search/?api=1&query=The+Peerless+Inn+Durgapur+West+Bengal"
+     target="_blank" rel="noopener">
+    FIND THE VENUE
+  </a>
+</section>
+
+<!-- RSVP -->
+<section class="section" id="rsvp">
+  <p class="eyebrow">Your presence is our present</p>
+  <h2>Kindly RSVP</h2>
+  <div class="gold-line"></div>
+  <p>Please let us know if you'll be joining our celebrations.</p>
+
+  <form action="https://formsubmit.co/YOUR_EMAIL_HERE"
+        method="POST">
+    <input type="hidden" name="_subject"
+           value="Wedding RSVP — Pankaj & Rimu">
+    <input type="hidden" name="_captcha" value="false">
+
+    <label for="guest">Your full name</label>
+    <input id="guest" name="Guest name"
+           type="text" required>
+
+    <label for="email">Email address</label>
+    <input id="email" name="Email"
+           type="email" required>
+
+    <label>Will you be joining us?</label>
+    <label class="choice">
+      <input type="radio" name="Attendance"
+             value="Joyfully accepts" required>
+      Joyfully accepts
+    </label>
+    <label class="choice">
+      <input type="radio" name="Attendance"
+             value="Regretfully declines">
+      Regretfully declines
+    </label>
+
+    <label for="guests">Number of people attending</label>
+    <select id="guests" name="Number of guests" required>
+      <option value="">Please select</option>
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+      <option>6 or more</option>
+    </select>
+
+    <label for="events">Which celebrations will you attend?</label>
+    <select id="events" name="Events attending">
+      <option>All celebrations</option>
+      <option>Mehendi, Engagement and Sangeet</option>
+      <option>Wedding only</option>
+      <option>Some celebrations — please contact me</option>
+    </select>
+
+    <label for="message">A note for the couple (optional)</label>
+    <textarea id="message" name="Message"
+              rows="3"></textarea>
+
+    <button class="button" type="submit">
+      SEND RSVP
+    </button>
+  </form>
+</section>
+
+<footer>
+  WITH LOVE, PANKAJ & RIMU · 10 MARCH 2027
+</footer>
+
+<script>
+function updateCountdown() {
+  const weddingDate = new Date("2027-03-10T00:00:00+05:30");
+  const now = new Date();
+  const diff = Math.max(0, weddingDate - now);
+
+  document.getElementById("days").textContent =
+    Math.floor(diff / 86400000);
+  document.getElementById("hours").textContent =
+    Math.floor((diff % 86400000) / 3600000);
+  document.getElementById("minutes").textContent =
+    Math.floor((diff % 3600000) / 60000);
+  document.getElementById("seconds").textContent =
+    Math.floor((diff % 60000) / 1000);
+}
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
+</script>
+
+</body>
+</html>
